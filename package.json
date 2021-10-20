@@ -7,7 +7,8 @@
   "scripts": {
     "start": "webpack serve --config webpack.dev.js --open",
     "build": "webpack --config webpack.prod.js",
-    "deploy": "yarn build -d dist"
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -b master -d dist"
   },
   "repository": {
     "type": "git",
@@ -40,6 +41,7 @@
   "dependencies": {
     "@popperjs/core": "^2.9.2",
     "bootstrap": "^5.0.2",
+    "gh-pages": "^3.2.3",
     "jquery": "^3.6.0",
     "popper.js": "^1.16.1",
     "tilt.js": "^1.2.1"
